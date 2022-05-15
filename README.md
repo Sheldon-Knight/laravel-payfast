@@ -1,7 +1,10 @@
-# Laravel Payfast Integration(Dev Mode)
+# Laravel Payfast Integration(Dev Mode)  
+
 
 Laravel Payfast Integrations an easy to use library for integrating PayFast payments into your laravel projects.
 This includes Custom Integration.
+
+Laravel Payfast is strictly use at own risk.
 
 ## Requirements
 
