@@ -55,7 +55,7 @@ class VerifyCsrfToken extends Middleware
 ```
 ### env
 ```php
-PAYFAST_MERCHANT_ID = Your Pyafast Merchant Id
+PAYFAST_MERCHANT_ID = Your Payfast Merchant Id
 PAYFAST_MERCHANT_KEY = Your Payfast Merchant Key
 PAYFAST_MERCHANT_PASSPHRASE = Your Payfast Passphrase
 PAYFAST_TESTING = True Or False
