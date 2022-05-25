@@ -48,17 +48,20 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-      '/itn' // Your Itn Route
+      '/payment/itn' // Your Itn Route
     ];
 }
 
 ```
-
-```env
-PAYFAST_MERCHANT_ID = 
-PAYFAST_MERCHANT_KEY = 
-PAYFAST_PASSPHRASE = 
-PAYFAST_TESTING = true/false
+### env
+```php
+PAYFAST_MERCHANT_ID = Your Pyafast Merchant Id
+PAYFAST_MERCHANT_KEY = Your Payfast Merchant Key
+PAYFAST_MERCHANT_PASSPHRASE = Your Payfast Passphrase
+PAYFAST_TESTING = True Or False
+PAYFAST_URL_ITN = "${APP_URL}/payment/itn"
+PAYFAST_URL_RETURN = "${APP_URL}/payment/return"
+PAYFAST_URL_CANCEL = "${APP_URL}/payment/cancel"
 ```
 
 ### Create Form Fields
@@ -108,9 +111,9 @@ Outputs:
 <form action="https://sandbox.payfast.co.za/eng/process" method="post">
     <input name="merchant_id" type="hidden" value="10000100">
     <input name="merchant_key" type="hidden" value="46f0cd694581a">
-    <input name="return_url" type="hidden" value="http://PayfastTest.test/success">
-    <input name="cancel_url" type="hidden" value="http://PayfastTest.test/cancel">
-    <input name="notify_url" type="hidden" value="http://PayfastTest.test/itn">
+    <input name="return_url" type="hidden" value="http://PayfastTest.test/payment/success">
+    <input name="cancel_url" type="hidden" value="http://PayfastTest.test/payment/cancel">
+    <input name="notify_url" type="hidden" value="http://PayfastTest.test/payment/itn">
     <input name="amount" type="hidden" value="100.00">
     <input name="item_name" type="hidden" value="Order#123">
     <input name="signature" type="hidden" value="51a97ee711960d3605f1386f5c0f70f6">

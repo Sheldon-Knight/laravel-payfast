@@ -9,9 +9,9 @@ return
   
 
     'urls' => [
-        'return_url'   => env('APP_URL') . '/success',   // Redirect URL on Success.
-        'cancel_url'   => env('APP_URL') . '/cancel',    // Redirect URL on Cancellation.
-        'notify_url'   => env('APP_URL') . '/itn',       // ITN URL.
+        'return_url'   => env('PAYFAST_URL_RETURN',''),
+        'cancel_url'   => env('PAYFAST_URL_CANCEL',''),
+        'notify_url'   =>  env('PAYFAST_URL_ITN',''),
         ],  
 
 ];
