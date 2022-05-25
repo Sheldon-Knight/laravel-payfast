@@ -11,7 +11,7 @@ class PayfastServiceProvider extends ServiceProvider
 
     public function register()
     {
-        // $this->app->bind('Billow\Contracts\PaymentProcessor', 'Billow\Payfast');
+        // $this->app->bind('', '');
     }
 
     public function boot()
@@ -24,7 +24,6 @@ class PayfastServiceProvider extends ServiceProvider
             __DIR__ . '/config/payfast.php', 'payfast'
         );
 
-        // dd('IT WORKS');
     }
 
 }
